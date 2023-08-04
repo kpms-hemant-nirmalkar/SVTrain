@@ -842,7 +842,7 @@ export default {
         seed: null,
         split_stages: {},
         resize: {
-          size: 'auto'
+          size: 'auto',
         },
       },
       fetchCount: 1,
@@ -855,7 +855,6 @@ export default {
       let { data } = await axios.get(
         `${getFileServerPath()}${ws}/TFSettings.json`,
       )
-      
       data = {
         ...data,
         group_by_strategy: data.splits_params.group_by_strategy,
@@ -869,7 +868,7 @@ export default {
         if (field === 'resize') {
           if (data[field] === 'auto' || (Array.isArray(data[field]) && !data[field].length)) {
             data[field] = { 
-              size: data[field] 
+              size: data[field], 
             }
           }
         }
