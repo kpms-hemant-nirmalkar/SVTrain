@@ -629,6 +629,18 @@ export default {
               help: '(hold CTRL to select multiple options)',
             },
           },
+          {
+            label: 'Heatmap overlay intensity',
+            field: 'heatmap_overlay_intensity',
+            type: types.SLIDER,
+            options: {
+              max: 100,
+              min: 0,
+            },
+            options: {
+              help: 'Defines the transparency of overlay',
+            },
+          },
         ],
         Augmentations: [
           {
